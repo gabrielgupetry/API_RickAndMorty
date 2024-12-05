@@ -1,0 +1,236 @@
+@font-face {
+    font-family: "Get Schwifty";
+    src: url("https://s3-us-west-2.amazonaws.com/s.cdpn.io/3089507/get-schwifty.woff") format("woff");
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-image: url("/src/images/FUNDO_2.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+    background-position: 97%;
+}
+
+.header {
+    box-shadow: 0 7px 20px #000;
+}
+
+.icone {
+    top: 30px;
+    right: 12px;
+    cursor: pointer;
+}
+
+.title {
+    color: #0e5015;
+    font-size: 50px;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    animation: title-animation 2.5s;
+    animation-timing-function: cubic-bezier(0.65, 0.1, 0.25, 1);
+    animation-delay: 0.5s;
+    animation-direction: alternate;
+}
+
+@keyframes title-animation {
+    0% {
+        transform: translateX(-1200px);
+    }
+    100% {
+        transform: translateX(0px);
+    }
+}
+
+.section {
+    margin-top: 300px;
+}
+
+footer {
+    background-color: #151916;
+}
+
+.footer-color-escrita {
+    color: #4a9848;
+}
+
+.card-animation {
+    transition-property: transform;
+    transition-duration: 0.5s;
+    transition-timing-function: ease-in-out;
+}
+
+.card-animation:hover {
+    transform: scale(1.05);
+}
+
+.input {
+    outline: none;
+    border: 1px solid #d4d1d1;
+    border-radius: 10px;
+}
+
+.input::placeholder {
+    color: #d4d1d1
+}
+
+.image {
+    height: 300px;
+    background-size: cover;
+}
+
+.items {
+    text-align: left;
+}
+
+.btn-submit {
+    text-decoration: none;
+    border: none;
+}
+
+.tilte-card {
+    font-size: 24px;
+    margin-bottom: -3px;
+    font-family: cursive;
+}
+
+.status-card {
+    font-size: .75rem;
+}
+
+.status-circle {
+    border-radius: 50%;
+    margin-right: 8px;
+    padding: 0px 10px;
+}
+
+.status-alive {
+    background-color: #4a9848;
+}
+
+.status-dead {
+    background-color: rgb(216, 7, 7);
+}
+
+.status-unknown {
+    background-color: #a8a2a2;
+}
+
+.locale {
+    margin-bottom: -2px;
+}
+
+.btn-details {
+    background-color: #4a9848;
+    border: #4a9848;
+    border-radius: 10px;
+    cursor: pointer;
+}
+
+.btn-details:hover {
+    background-color: #3a7c38;
+    border: #3a7c38;
+}
+
+.pagination {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 20px;
+    margin-bottom: 48px;
+}
+
+.pagination button {
+    background-color: #088861;
+    color: #fff;
+    border: none;
+    padding: 10px 15px;
+    margin: 0 5px;
+    cursor: pointer;
+    font-size: 16px;
+    border-radius: 10px;
+}
+
+.pagination button.active {
+    background-color: #079268;
+}
+
+.pagination button:disabled {
+    background-color: #e1e1e1;
+    cursor: not-allowed;
+    opacity: 0.6;
+}
+
+.name-modal {
+    font-size: 35px;
+    font-family: cursive;
+}
+
+.especie-modal,
+.status-modal,
+.genero-modal {
+    font-size: 1.25rem;
+    font-family: cursive;
+    color: #151916;
+    margin-bottom: -1.5625rem;
+}
+
+.local-modal {
+    font-size: 20px;
+    font-family: cursive;
+    color: #151916;
+}
+
+.modal-content {
+    background-color: #a2c388;
+    box-shadow: 2px 2px 10px #000;
+}
+
+#img-modal {
+    box-shadow: 2px 2px 10px #000;
+    border-radius: 50%;
+}
+
+@media (max-width: 61.875rem) {
+    .title {
+        font-size: 1.875rem;
+    }
+
+    .section {
+        padding: 0px 50px;
+    }
+
+    .modal-dialog {
+        width: 23.75rem;
+    }
+
+    .modal-body {
+        display: flex;
+        height: 220px;
+    }
+
+    #img-modal {
+        width: 150px;
+        margin-right: 20px !important;
+        margin-top: 20px;
+    }
+
+    .name-modal {
+        font-size: 1.25rem;
+    }
+
+    .especie-modal,
+    .status-modal,
+    .genero-modal {
+        font-size: .9375rem;
+        margin-bottom: .125rem;
+    }
+
+    .localizacao-modal {
+        font-size: .9375rem;
+    }
+}
